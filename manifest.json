@@ -3,7 +3,7 @@
   "shot_name": "GrejBox",
   "background_color": "#f2c6c1",
   "description": "Héhéhéhé",
-  "start_url": ".",
+  "start_url": "/grejbox",
   "display": "standalone",
   "icons": [
     {
