@@ -35,10 +35,15 @@
 
   <script>
     var audio;
+    var possibleGrejs = [0, 1];
+
     function grej() {
-      if (!audio) {
-        audio = new Audio("./grej.aac");
+      if (audio && audio.pause) {
+        audio.pause();
       }
+      audio = new Audio(
+        "./grej." + Math.floor(Math.random() * possibleGrejs.length) + ".aac"
+      );
       audio.play();
     }
   </script>
