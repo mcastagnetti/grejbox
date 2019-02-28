@@ -2,9 +2,10 @@
   "name": "GrejBox",
   "shot_name": "GrejBox",
   "background_color": "#f2c6c1",
+  "theme_color": "#f2c6c1",
   "description": "Héhéhéhé",
   "start_url": "/grejbox",
-  "display": "standalone",
+  "display": "fullscreen",
   "icons": [
     {
       "src": "favicon/favicon-16x16.png",
