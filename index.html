@@ -168,12 +168,18 @@
       }
     </style>
   </head>
+
   <body>
     <button class="grej" onclick="grej()">Grej</button>
     <div class="fakegrej"></div>
   </body>
 
   <script>
+    // Check that service workers are registered
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+
     var audio;
     var possibleGrejs = [0, 1];
 
