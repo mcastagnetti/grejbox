@@ -123,12 +123,28 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#fa7f72" />
     <style>
+      :root {
+        --salmon: #fa8072;
+        --light-salmon: #f2c6c1;
+        --nomlas: #003341;
+        --thgil-nomlas: #057f8d;
+        --primary: var(--salmon);
+        --secondary: var(--light-salmon);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --primary: var(--thgil-nomlas);
+          --secondary: var(--nomlas);
+        }
+      }
+
       body {
         display: flex;
         flex-direction: column;
         justify-content: center;
         height: 100vh;
-        background-color: #f2c6c1;
+        background-color: var(--secondary);
         overflow: hidden;
       }
 
@@ -137,9 +153,9 @@
         width: 250px;
         padding: 15px;
         background: transparent;
-        border: 7px solid salmon;
+        border: 7px solid var(--primary);
         border-radius: 5px;
-        color: salmon;
+        color: var(--primary);
         font-size: 35px;
         text-transform: uppercase;
         font-weight: bold;
