@@ -127,16 +127,20 @@
       :root {
         --salmon: #fa8072;
         --light-salmon: #f2c6c1;
+        --dark-salmon: #e9967a;
         --nomlas: #003341;
         --thgil-nomlas: #057f8d;
+        --dark-thgil-nomlas: #024c54;
         --primary: var(--salmon);
         --secondary: var(--light-salmon);
+        --dark-secondary: var(--dark-salmon);
       }
 
       @media (prefers-color-scheme: dark) {
         :root {
           --primary: var(--thgil-nomlas);
           --secondary: var(--nomlas);
+          --dark-secondary: var(--dark-thgil-nomlas);
         }
       }
 
@@ -161,6 +165,16 @@
         text-transform: uppercase;
         font-weight: bold;
         cursor: pointer;
+      }
+
+      .grej:focus {
+        outline: none;
+        color: var(--secondary);
+        background-color: var(--primary);
+      }
+
+      .grej:active {
+        background-color: var(--dark-secondary);
       }
 
       .fakegrej {
